@@ -16,7 +16,9 @@ class Search extends Component {
         }, _ => this.search.focus());
     };
 
-    handleSearch = event => {}
+    handleSearch = ({target}) => {
+      console.log(target.value);
+    }
 
     render() {
         return (

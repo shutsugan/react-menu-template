@@ -7,7 +7,7 @@ import Search from '../Search';
 import './index.css';
 
 const NavHeader = _ => (
-    <div className="nav-header">
+    <div className="nav-header flex-center flex-row">
         <Logo logo="oceanprime" label="Bar" />
         <NavItems />
         <Search />

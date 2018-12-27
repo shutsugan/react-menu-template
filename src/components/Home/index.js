@@ -1,8 +1,11 @@
 import React from 'react';
 
+import HeroBanner from '../HeroBanner';
+import './index.css';
+
 const Home = _ => (
-    <div className="home">
-        <h1>Home Page.</h1>
+    <div className="home flex-center flex-row">
+        <HeroBanner />
     </div>
 );
 
