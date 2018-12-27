@@ -1,0 +1,17 @@
+.nav-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav__item {
+    font-size: .8em;
+    font-weight: 500;
+    color: var(--seconday-color);
+    margin-right: 16px;
+    transition: .3s;
+}
+
+.nav__item:hover {
+    color: var(--primary-color);
+}
