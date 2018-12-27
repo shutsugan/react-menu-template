@@ -1,0 +1,9 @@
+.nav-categories {
+  width: 100%;
+  height: auto;
+  padding: 0 16px;
+}
+
+.nav-categories__list {
+  flex-wrap: wrap;
+}

@@ -1,0 +1,17 @@
+.category-item {
+  line-height: 40px;
+  font-size: .7em;
+  font-weight: 700;
+  color: #fff;
+  background: var(--primary-color);
+  border-radius: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+  padding: 0 16px;
+  margin: 0 4px;
+}
+
+.category-item:hover {
+  background: var(--secondary-color);
+}
