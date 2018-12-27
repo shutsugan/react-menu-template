@@ -1,0 +1,32 @@
+.logo {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo__name {
+    font-size: 1.3em;
+    font-weight: 900;
+    color: var(--seconday-color);
+}
+
+.logo__label {
+    position: absolute;
+    bottom: -12px;
+    right: 5px;
+    color: #fff;
+    background: var(--primary-color);
+    font-size: .8em;
+    font-weight: 900;
+    padding: 1px 8px;
+    border: solid 3px var(--background-color);
+    border-radius: 12px;
+}
+
+.logo--mr-rt {
+    margin-right: 80px;
+}
