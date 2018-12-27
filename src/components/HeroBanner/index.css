@@ -1,0 +1,37 @@
+.hero-banner {
+  width: 100%;
+  height: 250px;
+  padding: 16px;
+  position: relative;
+}
+
+.hero-banner__title {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  word-spacing: 2px;
+}
+
+.hero-banner__slug {
+  font-size: .8em;
+  font-weight: 400;
+  color: var(--gray-color);
+  text-transform: uppercase;
+  word-spacing: .5px;
+}
+
+.hero-banner__image-dessert {
+  position: absolute;
+  top: 5px;
+  right: 50px;
+  width: 30%;
+}
+
+.hero-banner__image-ingredients {
+  position: absolute;
+  top: -200px;
+  left: -150px;
+  width: 30%;
+  transform: scaleX(-1);
+}
