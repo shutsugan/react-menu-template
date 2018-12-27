@@ -6,7 +6,7 @@
 .nav__item {
     font-size: .8em;
     font-weight: 500;
-    color: var(--seconday-color);
+    color: var(--secondary-color);
     margin-right: 16px;
     transition: .3s;
 }
