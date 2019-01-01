@@ -15,3 +15,7 @@
 .category-item:hover {
   background: var(--secondary-color);
 }
+
+.selected {
+  background: var(--secondary-color);
+}

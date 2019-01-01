@@ -11,6 +11,12 @@
     color: var(--secondary-color);
 }
 
+.logo__name-reverse {
+  font-size: 1.3em;
+  font-weight: 900;
+  color: #fff;
+}
+
 .logo__label {
     position: absolute;
     bottom: -12px;
@@ -21,6 +27,19 @@
     font-weight: 900;
     padding: 1px 8px;
     border: solid 3px var(--background-color);
+    border-radius: 12px;
+}
+
+.logo__label-reverse {
+    position: absolute;
+    bottom: -12px;
+    right: 5px;
+    color: #fff;
+    background: var(--primary-color);
+    font-size: .8em;
+    font-weight: 900;
+    padding: 1px 8px;
+    border: solid 3px var(--secondary-color);
     border-radius: 12px;
 }
 

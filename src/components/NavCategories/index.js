@@ -1,36 +1,31 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import {
+  getCategories,
+  getCategory
+} from '../../reducers/menus';
+import { setCategory} from '../../actions/menus';
 
 import CategoryItem from '../CategoryItem';
 import './index.css';
 
 class NavCategories extends Component {
-  state = {
-    category: null
-  };
-
   handleClick = ({target}) => {
-    this.setState({
-      category: target.textContent
-    });
+    this.props.dispatch(setCategory(target.textContent));
   };
 
   render() {
-    const mock_categories = [
-      {name: 'Red wine'},
-      {name: 'Entrées'},
-      {name: 'Planches charcuterie'},
-      {name: 'Desserts'}
-    ];
-
-    const categories = mock_categories.map(({name}, index) => (
+    const categories = this.props.categories.map((name, index) => (
       <CategoryItem
         key={index}
         name={name}
+        category={this.props.category}
         handleClick={this.handleClick} />
     ));
 
     return (
-      <div className="nav-categories flex-center flex-column">
+      <div className="nav-categories max-width flex-center flex-column">
         <ul className="nav-categories__list flex-center flex-row">
           {categories}
         </ul>
@@ -39,4 +34,11 @@ class NavCategories extends Component {
   }
 }
 
-export default NavCategories;
+const mapStateToProps = state => {
+  return {
+    categories: getCategories(state),
+    category: getCategory(state)
+  }
+}
+
+export default connect(mapStateToProps)(NavCategories);

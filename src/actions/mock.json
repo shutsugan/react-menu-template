@@ -1,0 +1,124 @@
+{
+   "informations":{
+      "name":"Ocean Prime",
+      "logo_name": "oceanprime",
+      "title": "an award winning modern American restaurant",
+      "slug": "socialize, talk business, celebrate and indulge",
+      "slogan": "bar",
+      "description":"Ocean Prime is an award winning modern American restaurant and lounge from renowned restaurateur Cameron Mitchell. With stunning settings, a vibrant energy, an impressive menu of seafood and steaks and truly exceptional service, Ocean Prime is an ideal place to socialize, talk business, celebrate and indulge.",
+      "addresse":"123 W 52nd St, New York City, NY 100-6003",
+      "email":"ocean.prime@example.com",
+      "website":"www.example.com",
+      "phone":"06-44-77-88-42",
+      "logo_url":"https://cdn2.vectorstock.com/i/1000x1000/75/41/cook-chef-restaurant-logo-vector-4197541.jpg",
+      "opening_hours":[
+         "11:30 AM - 10:00 PM",
+         "11:30 AM - 02:30 PM / 08:00 AM - 11:30 PM",
+         "11:30 AM - 10:00 PM",
+         "11:30 AM - 02:30 PM / 08:00 AM - 11:30 PM",
+         "11:30 AM - 11:00 PM",
+         "12:30 AM - 11:00 PM",
+         "CLOSED"
+      ]
+   },
+   "categories":[
+      {
+         "name":"Red wine",
+         "icon":"https://image.flaticon.com/icons/svg/168/168570.svg",
+         "items":[
+            {
+               "name":"Verre de vin beaujolais - 33 Cl",
+               "description":"Un verre de vin de qualité, le beaujolais",
+               "image_url":"http://idata.over-blog.com/0/01/41/08/New3/evenement_beaujolais_nouveau.jpg",
+               "price":5.4
+            },
+            {
+               "name":"Bouteille de vin Bordeaux 75 Cl",
+               "description":"Le vignoble de Bordeaux est le vignoble regroupant toutes les vignes du département de la Gironde, dans le Sud-Ouest de la France",
+               "image_url":"Le vignoble de Bordeaux est le vignoble regroupant toutes les vignes du département de la Gironde, dans le Sud-Ouest de la France",
+               "price":34
+            },
+            {
+               "name":"Dim sum végétarien",
+               "description":"Raviolis aux légumes choux, radis blanc, pousse de bambou, gingembre",
+               "image_url":"https://www.vegetarisme.fr/wp-content/uploads/2015/03/food.5.10.lg_.jpg",
+               "price":7.8
+            }
+         ]
+      },
+      {
+         "name":"Entrées",
+         "icon":"https://previews.123rf.com/images/martialred/martialred1601/martialred160100138/50763447-garden-salad-with-lettuce-tomatoes-bread-crumbs-flat-icon-for-apps-and-websites.jpg",
+         "items":[
+            {
+               "name":"Rouleaux de shanghai",
+               "description":"Frits, poulet, vermicelles et légumes, servis par 2 pièces",
+               "image_url":"http://f.roocdn.com/images/menu_items/9597103/item-image.jpg?width=511&height=288&auto=webp&format=jpg&fit=cr",
+               "price":12.8,
+               "reduction":"30%"
+            },
+            {
+               "name":"Raviolis pékinois",
+               "description":"Poêlés, servis par 4 pièces dans une assiète",
+               "image_url":"http://f.roocdn.com/images/menu_items/9597105/item-image.jpg?width=511&height=288&auto=webp&format=jpg&fit=crop&v=1537456607",
+               "price":6.0
+            },
+            {
+               "name":"Dim sum végétarien",
+               "description":"Raviolis aux légumes choux, radis blanc, pousse de bambou, gingembre",
+               "image_url":"https://www.vegetarisme.fr/wp-content/uploads/2015/03/food.5.10.lg_.jpg",
+               "price":7.8
+            }
+         ]
+      },
+      {
+         "name":"Planches charcuterie",
+         "icon":"https://cdn1.iconfinder.com/data/icons/basic-ui-elements-round/700/06_menu_stack-2-512.png",
+         "items":[
+            {
+               "name":"Planche \"Guéméné\"",
+               "description":"Sélection de charcuteries bretonnes",
+               "image_url":"https://static.cuisineaz.com/610x610/i11037-planche-charcuterie.jpg",
+               "price":13
+            },
+            {
+               "name":"Planche ENZO",
+               "description":"Sélection de charcuteries italiennes de qualité",
+               "image_url":"http://www.vocally.fr/wp-content/uploads/2018/09/mastroianni-charcuterie.jpg",
+               "price":12.90
+            },
+            {
+               "name":"Planche Bodega",
+               "description":"Sélection de charcuteries ibériques et de charcuterie affine",
+               "image_url":"http://www.lacaveaterroirs.fr/upload/files/plateaux/Plateau%20Mixte%20Fromages%20Charcuteries%20La%20Cave%20%C3%A0%20Terroirs%20Strasbourg%201.jpg",
+               "price":7.8,
+               "reduction":"20%"
+            }
+         ]
+      },
+      {
+         "name":"Desserts",
+         "icon":"https://cdn1.iconfinder.com/data/icons/basic-ui-elements-round/700/06_menu_stack-2-512.png",
+         "items":[
+            {
+               "name":"Café ou thé gourmand",
+               "description":"Café ou thé au choix + Assortiment mignardises du moment",
+               "image_url":"http://www.fnb-info.fr/medias/images/boisson_chaude.jpg",
+               "price":7.45
+            },
+            {
+               "name":"Ch'Tyramisu au spéculoos",
+               "description":"Cette recette est une variante du fameux Tiramisu. Elle porte le nom de CH'TIramisu, car elle vient de la région du nord",
+               "image_url":"http://www.ca-drache.fr/wp-content/uploads/2014/10/3b58f2956e87760ca2c439a98daa17cc.jpg",
+               "price":8.6
+            },
+            {
+               "name":"Crumble aux pommes de Bretagne",
+               "description":"Crumbles bretons : Fruit emblématique de l'automne et que l'on retrouve également dans le patrimoine culinaire breton",
+               "image_url":"https://cuisinealouest.com/wp-content/uploads/2018/04/crumble-sarrasin-fruits-rouges-1200x799.jpg",
+               "price":5
+            }
+         ]
+      }
+   ]
+}

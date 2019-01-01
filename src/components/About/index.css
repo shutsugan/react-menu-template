@@ -1,0 +1,90 @@
+.about__container {
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+.about {
+  width: 100%;
+  max-width: 1280px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.about__wrapper {
+  align-items: flex-start;
+}
+
+.about__logo {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  width: 100%;
+  border: solid 1px var(--background-color);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.about__left {
+  flex: 3;
+}
+
+.about__middle {
+  flex: 2;
+  margin: 0 16px;
+}
+
+.about__right {
+  flex: 1;
+}
+
+.about__hours {
+  margin-bottom: 2.5px;
+}
+
+.about__day {
+  padding: 2px 8px;
+  border-radius: 15px;
+  font-size: .6em;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--primary-color);
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.about__time {
+  font-size: .9em;
+  font-weight: 500;
+}
+
+.about__contact-info {
+  background: var(--background-color);
+}
+
+.contact-text {
+  font-size: .9em;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+.contact-text:last-child {
+  padding-bottom: 0;
+}
+
+.about__main-name {
+  font-weight: 900;
+}
+
+.about__main-description {
+  margin-top: 8px;
+  font-size: .9em;
+}
+
+.about__map {
+  width: 40%;
+  height: 293px;
+}

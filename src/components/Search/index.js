@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import FaSearch from 'react-icons/lib/fa/search';
+
+import { getSearch } from '../../reducers/menus';
+import { startSearch } from '../../actions/menus';
 
 import './index.css';
 
@@ -8,7 +12,7 @@ class Search extends Component {
         enable: false,
     };
 
-    search: null;
+    search: search;
 
     enableSearch = _ => {
         this.setState({
@@ -17,7 +21,7 @@ class Search extends Component {
     };
 
     handleSearch = ({target}) => {
-      console.log(target.value);
+      this.props.dispatch(startSearch(target.value));
     }
 
     render() {
@@ -56,4 +60,10 @@ class Search extends Component {
     }
 };
 
-export default Search;
+const mapStateToProps = state => {
+  return {
+    search: getSearch(state)
+  }
+}
+
+export default connect(mapStateToProps)(Search);

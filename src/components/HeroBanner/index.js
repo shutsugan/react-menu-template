@@ -1,17 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-import dessert from '../../assets/dessert_1.png';
-import ingredients from '../../assets/ingredients_1.png';
+import {
+  getTitle,
+  getSlug
+} from '../../reducers/menus';
+
+// import dessert from '../../assets/dessert_1.png';
+// import ingredients from '../../assets/ingredients_1.png';
 import './index.css';
 
-const HeroBanner = _ => (
-    <section className="hero-banner flex-center flex-column">
-      <h1 className="hero-banner__title">
-        an award winning modern American restaurant
-      </h1>
-      <span className="hero-banner__slug">
-        socialize, talk business, celebrate and indulge
-      </span>
+const HeroBanner = ({title, slug}) => (
+    <section className="hero-banner max-width flex-center flex-column">
+      <h1 className="hero-banner__title">{title}</h1>
+      <span className="hero-banner__slug">{slug}</span>
       {/*
       <img
         className="hero-banner__image-dessert"
@@ -27,4 +29,11 @@ const HeroBanner = _ => (
     </section>
 );
 
-export default HeroBanner;
+const mapStateToProps = state => {
+  return {
+    title: getTitle(state),
+    slug: getSlug(state)
+  }
+}
+
+export default connect(mapStateToProps)(HeroBanner);

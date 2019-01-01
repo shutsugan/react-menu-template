@@ -2,9 +2,9 @@ import React from 'react';
 
 import './index.css';
 
-const CategoryItem = ({name, handleClick}) => (
+const CategoryItem = ({name, category, handleClick}) => (
     <li
-      className="category-item"
+      className={`category-item ${category === name ? 'selected' : ''}`}
       onClick={handleClick}>
 
       {name}
