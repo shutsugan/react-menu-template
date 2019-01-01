@@ -8,14 +8,13 @@ import {
   getSearch,
   getSearchMenus
 } from '../../reducers/menus';
+import { setMenu } from '../../actions/menus';
 
 import Menu from '../Menu';
 import './index.css';
 
-const Menus = ({menus, category, byCategory, search, searchResult}) => {
-  const handleClick = menu => {
-    console.log(menu);
-  };
+const Menus = ({menus, category, byCategory, search, searchResult, dispatch}) => {
+  const handleClick = menu => dispatch(setMenu(menu));
 
   let menusList = [];
   let list = menus;

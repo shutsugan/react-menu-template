@@ -6,6 +6,7 @@ import {
   FETCH_MENUS_SUCCEEDED,
   FETCH_MENUS_ERRORED,
   START_SEARCH,
+  SET_MENU,
   SET_CATEGORY,
   SET_INFORMATIONS
 } from '../actions/menus';
@@ -18,6 +19,7 @@ const search = state => state.menus.search;
 const searchMenus = state => state.menus.searchMenus;
 const category = state => state.menus.category;
 const items = state => state.menus.menus;
+const menu = state => state.menus.menu;
 
 export const getLogo = createSelector([logo], logo => logo);
 export const getSlogan = createSelector([slogan], slogan => slogan);
@@ -26,6 +28,7 @@ export const getSlug = createSelector([slug], slug => slug);
 export const getSearch = createSelector([search], search => search);
 export const getSearchMenus = createSelector([searchMenus], menus => menus);
 export const getCategory = createSelector([category], category => category);
+export const getMenu = createSelector([menu], menu => menu);
 
 export const getCategories = createSelector([items], categories => {
     return categories.map(category => category.name);
@@ -70,6 +73,11 @@ export default function menus(state = initialMenuState, {type, payload}) {
         ...state,
         searchMenus: menus,
         search: payload
+      }
+    case SET_MENU:
+      return {
+        ...state,
+        menu: payload
       }
     case SET_CATEGORY:
       return {

@@ -1,23 +1,18 @@
 import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+
+import { getMenu } from '../../reducers/menus';
+import { setMenu } from '../../actions/menus';
 
 import './index.css';
 
 class Modal extends Component {
-  state = {
-    open: true
-  };
-
-  closeModal = _ => {
-    this.setState({open: !this.state.open})
-  };
-
-  cancelCloseModal = event => {
-    event.stopPropagation();
-  }
+  closeModal = _ => this.props.dispatch(setMenu(null));
+  cancelCloseModal = event =>   event.stopPropagation();
 
   render() {
     let modal = '';
-    if (this.state.open) {
+    if (this.props.menu) {
       modal = (<div
         className="modal__overlay flex-center flex-row"
         onClick={this.closeModal}>
@@ -26,12 +21,14 @@ class Modal extends Component {
           className="modal shadow"
           onClick={this.cancelCloseModal}>
           <div className="modal__left flex-column">
-            <h1 className="modal__title section__title">Menu item name</h1>
+            <h1 className="modal__title section__title">
+              {this.props.menu.name}
+            </h1>
             <div className="modal__image-wrapper">
               <img
                 className="modal__image"
-                src="https://www.vegetarisme.fr/wp-content/uploads/2015/03/food.5.10.lg_.jpg"
-                alt="name"
+                src={this.props.menu.image_url}
+                alt={this.props.menu.name}
               />
             </div>
           </div>
@@ -39,23 +36,21 @@ class Modal extends Component {
             <div className="modal__description-header flex-row">
               <div className="Modal__price flex-column">
                 <span className="text-label">price:</span>
-                €120.20
+                €{this.props.menu.price}
               </div>
               <span className={
                 `modal__label
                 ${
-                  true
+                  this.props.menu.reduction
                     ? 'modal__label--active'
                     : 'modal__label--enactive'
                 }
                 `
-              }>Sold</span>
+              }>Sold {this.props.menu.reduction}</span>
             </div>
             <div className="modal__description flex-column">
               <span className="text-label">description:</span>
-              Le vignoble de Bordeaux est le vignoble regroupant toutes les
-              vignes du département de la Gironde, dans le Sud-Ouest de la
-              France
+              {this.props.menu.description}
             </div>
           </div>
         </div>
@@ -68,4 +63,10 @@ class Modal extends Component {
   }
 }
 
-export default Modal;
+const mapStateToProps = state => {
+  return {
+    menu: getMenu(state)
+  };
+};
+
+export default connect(mapStateToProps)(Modal);

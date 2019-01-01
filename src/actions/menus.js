@@ -4,6 +4,7 @@ export const LOADING = 'LOADING';
 export const FETCH_MENUS_SUCCEEDED = 'FETCH_MENUS_SUCCEEDED';
 export const FETCH_MENUS_ERRORED = 'FETCH_MENUS_ERRORED';
 export const START_SEARCH = 'START_SEARCH';
+export const SET_MENU = 'SET_MENU';
 export const SET_CATEGORY = 'SET_CATEGORY';
 export const SET_INFORMATIONS = 'SET_INFORMATIONS';
 
@@ -20,7 +21,12 @@ export const startSearch = search => ({
 export const setCategory = category => ({
   type: SET_CATEGORY,
   payload: category
-})
+});
+
+export const setMenu = menu => ({
+  type: SET_MENU,
+  payload: menu
+});
 
 export const fetchMenusSucceeded = menus => ({
   type: FETCH_MENUS_SUCCEEDED,
