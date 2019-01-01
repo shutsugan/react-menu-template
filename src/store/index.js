@@ -1,6 +1,6 @@
 export const initialMenuState = {
   isLoading: false,
-  error: false,
+  error: null,
   search: null,
   searchMenus: [],
   menus: [],

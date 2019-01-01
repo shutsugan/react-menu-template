@@ -1,0 +1,8 @@
+.error {
+  width: 100%;
+  line-height: 40px;
+  background: var(--danger-color);
+  font-size: .8em;
+  font-weight: bold;
+  color: #fff;
+}

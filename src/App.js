@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { loading, fetchMenus } from './actions/menus';
 
+import Error from './components/Error';
 import NavHeader from './components/NavHeader';
 import Main from './components/Main';
 import './App.css';
@@ -16,6 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
+        <Error />
         <NavHeader />
         <Main />
       </div>

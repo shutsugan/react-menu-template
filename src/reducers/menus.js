@@ -20,6 +20,7 @@ const searchMenus = state => state.menus.searchMenus;
 const category = state => state.menus.category;
 const items = state => state.menus.menus;
 const menu = state => state.menus.menu;
+const message = state => state.menus.error;
 
 export const getLogo = createSelector([logo], logo => logo);
 export const getSlogan = createSelector([slogan], slogan => slogan);
@@ -29,6 +30,7 @@ export const getSearch = createSelector([search], search => search);
 export const getSearchMenus = createSelector([searchMenus], menus => menus);
 export const getCategory = createSelector([category], category => category);
 export const getMenu = createSelector([menu], menu => menu);
+export const getError = createSelector([message], message => message);
 
 export const getCategories = createSelector([items], categories => {
     return categories.map(category => category.name);
