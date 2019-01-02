@@ -28,10 +28,12 @@ const store = createStore(
 
 const container = document.querySelector('#root');
 ReactDOM.render(
+  <Provider store={store}>
     <BrowserRouter>
-      <Provider store={store}><App /></Provider>
-    </BrowserRouter>,
-    container
+      <App />
+    </BrowserRouter>
+  </Provider>,
+  container
 );
 
 // If you want your app to work offline and load faster, you can change

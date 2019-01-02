@@ -88,3 +88,27 @@
   width: 40%;
   height: 293px;
 }
+
+@media only screen and (max-width : 890px) {
+  .about__left {
+    display: none;
+  }
+
+  .about__middle {
+    margin: 0 16px 0 0;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  .about__wrapper {
+    flex-direction: column;
+  }
+
+  .about__middle {
+    margin: 0;
+  }
+
+  .about__right {
+    width: 100%;
+  }
+}

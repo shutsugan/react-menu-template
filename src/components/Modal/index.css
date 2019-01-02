@@ -10,7 +10,7 @@
 
 .modal {
   width: 90%;
-  height: auto;
+  height: 90%;
   background: var(--background-color);
   border-radius: 10px;
   padding: 16px;
@@ -33,6 +33,7 @@
 .modal__image {
   width: 100%;
   height: auto;
+  max-height: 500px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -84,4 +85,41 @@
   color: var(--primary-color);
   border: solid 1px var(--primary-color);
   opacity: .4;
+}
+
+.modal-enter {
+  opacity: 0.01;
+}
+
+.modal-enter.modal-enter-active {
+  opacity: 1;
+  transition: opacity .2s ease-in;
+}
+
+.modal-leave {
+  opacity: 1;
+}
+
+.modal-leave.modal-leave-active {
+  opacity: 0.01;
+  transition: opacity .2s ease-in;
+}
+
+@media only screen and (max-width : 480px) {
+  .modal {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .modal__title {
+    font-size: 1em;
+  }
+
+  .modal__description-header {
+    align-items: center;
+  }
+
+  .modal__image {
+    height: 250px;
+  }
 }

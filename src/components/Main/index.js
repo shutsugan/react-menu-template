@@ -5,6 +5,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Home from '../Home';
 import AboutPage from '../AboutPage';
 import Modal from '../Modal';
+import Loader from '../Loader';
 import './index.css';
 
 const Main = ({ location }) => (
@@ -17,12 +18,13 @@ const Main = ({ location }) => (
 
           <Switch location={location}>
             <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={AboutPage} />
+            <Route path="/about" component={AboutPage} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>
 
       <Modal />
+      <Loader />
     </div>
 );
 

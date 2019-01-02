@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import { getMenu } from '../../reducers/menus';
 import { setMenu } from '../../actions/menus';
@@ -58,7 +59,15 @@ class Modal extends Component {
     }
 
     return (
-      <Fragment>{modal}</Fragment>
+      <Fragment>
+        <ReactCSSTransitionGroup
+          transitionName="modal"
+          transitionEnterTimeout={200}
+          transitionLeaveTimeout={200}>
+
+          {modal}
+        </ReactCSSTransitionGroup>
+      </Fragment>
     );
   }
 }

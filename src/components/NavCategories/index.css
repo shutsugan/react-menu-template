@@ -7,3 +7,10 @@
 .nav-categories__list {
   flex-wrap: wrap;
 }
+
+@media only screen and (max-width : 480px) {
+  .nav-categories__list {
+    padding: 0;
+    justify-content: flex-start;
+  }
+}

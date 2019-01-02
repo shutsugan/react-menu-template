@@ -19,3 +19,12 @@
 .selected {
   background: var(--secondary-color);
 }
+
+@media only screen and (max-width : 880px) {
+  .category-item {
+    line-height: 30px;
+    font-weight: 800;
+    border-radius: 30px;
+    margin-bottom: 4px;
+  }
+}

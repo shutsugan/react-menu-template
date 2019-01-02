@@ -43,3 +43,9 @@
 .search--mr-lf {
     margin-left: 80px;
 }
+
+@media only screen and (max-width : 480px) {
+  .search--mr-lf {
+      margin-left: 16px;
+  }
+}

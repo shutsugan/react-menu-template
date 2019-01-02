@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 import AboutMap from './AboutMap';
 import './index.css';
@@ -43,7 +44,9 @@ const About = _ => {
   return (
     <div className="about__container flex-center flex-row">
       <div className="about">
-        <h3 className="section__title">About Us</h3>
+        <ScrollableAnchor id={'about'}>
+          <h3 className="section__title">About Us</h3>
+        </ScrollableAnchor>
         <div className="about__wrapper flex-row">
           <div className="about__left flex-column">
             <AboutMap />

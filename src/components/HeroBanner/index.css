@@ -35,3 +35,25 @@
   width: 30%;
   transform: scaleX(-1);
 }
+
+@media only screen and (max-width : 760px) {
+  .hero-banner__title {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width : 480px) {
+  .hero-banner {
+      height: auto;
+      margin-bottom: 16px;
+  }
+
+  .hero-banner__title {
+      font-size: 1.2em;
+  }
+
+  .hero-banner__slug {
+    font-size: .7em;
+    text-align: center;
+  }
+}

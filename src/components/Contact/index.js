@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 import './index.css';
 
@@ -19,7 +20,9 @@ class Contact extends Component {
   render() {
     return (
       <div className="contact max-width flex-column">
-        <h3 className="section__title mr-bt-none">Subscribe</h3>
+        <ScrollableAnchor id={'subscribe'}>
+          <h3 className="section__title mr-bt-none">Subscribe</h3>
+        </ScrollableAnchor>
         <span className="contact__sub-title">
           subscribe to our newsletter to get your latest update
         </span>
