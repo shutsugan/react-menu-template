@@ -37,7 +37,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Screenshots
 
-![app screenshot](https://github.com/shutsugan/tooly/blob/master/app.png)
+![app screenshot](https://github.com/shutsugan/react-menu-template/blob/master/app.png)
 
 ## License
 
