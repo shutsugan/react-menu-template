@@ -1,6 +1,7 @@
 .nav-items {
     justify-content: flex-start;
     align-items: center;
+    z-index: 1;
 }
 
 .nav__item {

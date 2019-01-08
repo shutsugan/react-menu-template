@@ -11,7 +11,7 @@ import './index.css';
 const Home = _ => (
     <div className="home flex-center flex-row">
         <HeroBanner />
-        <NavCategories />
+        {/*<NavCategories />*/}
         <Menus />
         <About />
         <Contact />

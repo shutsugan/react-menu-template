@@ -1,0 +1,21 @@
+.sidebar-item {
+  display: block;
+  padding: 1em 1em 1em 1.2em;
+  outline: none;
+  box-shadow: inset 0 -1px #a7aaaf;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  text-shadow: 0 0 1px rgba(255,255,255,0.1);
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: background .2s, box-shadow .2s;
+  cursor: pointer;
+}
+
+.sidebar-item:hover {
+  background: var(--background-color);
+}
+
+.item-active {
+  background: var(--background-color);
+}

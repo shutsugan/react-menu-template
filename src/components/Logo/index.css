@@ -48,6 +48,9 @@
 }
 
 @media only screen and (max-width : 480px) {
+  .logo {
+    display: none;
+  }
   .logo--mr-rt {
       margin-right: 16px;
   }

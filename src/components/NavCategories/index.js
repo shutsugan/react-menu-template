@@ -21,7 +21,8 @@ class NavCategories extends Component {
         key={index}
         name={name}
         category={this.props.category}
-        handleClick={this.handleClick} />
+        handleClick={this.handleClick}
+      />
     ));
 
     return (
