@@ -7,15 +7,14 @@ import thunk from 'redux-thunk';
 
 import { menus } from './reducers';
 
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import loadable from './utils/loadable';
 
-const rootReducer = (state = {}, action) => {
-  return {
-    menus: menus(state.menus, action)
-  }
-};
+import './index.css';
+
+const LoadableApp = loadable('App', 200);
+
+const rootReducer = (state = {}, action) => ({menus: menus(state.menus, action)});
 
 const store = createStore(
   rootReducer,
@@ -30,13 +29,10 @@ const container = document.querySelector('#root');
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <LoadableApp />
     </BrowserRouter>
   </Provider>,
   container
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.register();

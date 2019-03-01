@@ -1,21 +1,22 @@
 import React from 'react';
 
-import HeroBanner from '../HeroBanner';
-import NavCategories from '../NavCategories';
-import Menus from '../Menus';
-import About from '../About';
-import Contact from '../Contact';
-import MainFooter from '../MainFooter';
+import loadable from '../../utils/loadable';
+
 import './index.css';
+
+const LoadableHeroBanner = loadable('components/HeroBanner', 200);
+const LoadableMenus = loadable('components/Menus', 200);
+const LoadableAbout = loadable('components/About', 200);
+const LoadableContact = loadable('components/Contact', 200);
+const LoadableMainFooter = loadable('components/MainFooter', 200);
 
 const Home = _ => (
     <div className="home flex-center flex-row">
-        <HeroBanner />
-        {/*<NavCategories />*/}
-        <Menus />
-        <About />
-        <Contact />
-        <MainFooter />
+        <LoadableHeroBanner />
+        <LoadableMenus />
+        <LoadableAbout />
+        <LoadableContact />
+        <LoadableMainFooter />
     </div>
 );
 

@@ -9,9 +9,11 @@ import {
   getSearchMenus
 } from '../../reducers/menus';
 import { setMenu } from '../../actions/menus';
+import loadable from '../../utils/loadable';
 
-import Menu from '../Menu';
 import './index.css';
+
+const LoadableMenu = loadable('components/Menu', 200);
 
 const Menus = ({menus, category, byCategory, search, searchResult, dispatch}) => {
   const handleClick = menu => dispatch(setMenu(menu));
@@ -23,7 +25,7 @@ const Menus = ({menus, category, byCategory, search, searchResult, dispatch}) =>
   if (search) list = searchResult;
 
   menusList = list.map((menu, index) => (
-      <Menu
+      <LoadableMenu
         key={`${menu.name}-${index}`}
         menu={menu}
         handleClick={handleClick} />

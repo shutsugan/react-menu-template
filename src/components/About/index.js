@@ -1,8 +1,11 @@
 import React from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor'
 
-import AboutMap from './AboutMap';
+import loadable from '../../utils/loadable';
+
 import './index.css';
+
+const LoadableAboutMap = loadable('components/About/AboutMap', 200);
 
 const mock_informations = {
   "name":"Ocean Prime",
@@ -49,7 +52,7 @@ const About = _ => {
         </ScrollableAnchor>
         <div className="about__wrapper flex-row">
           <div className="about__left flex-column">
-            <AboutMap />
+            <LoadableAboutMap />
           </div>
           <div className="about__middle flex-center flex-column">
             <div className="about__contact-info flex-column card">

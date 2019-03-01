@@ -2,11 +2,13 @@ import React from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import Home from '../Home';
-import AboutPage from '../AboutPage';
-import Modal from '../Modal';
-import Loader from '../Loader';
+import loadable from '../../utils/loadable';
+
 import './index.css';
+
+const LoadableHome = loadable('components/Home', 200);
+const LoadableAboutPage = loadable('components/AboutPage', 200);
+const LoadableModal = loadable('components/Modal', 200);
 
 const Main = ({ location }) => (
     <div className="main flex-center flex-column">
@@ -17,14 +19,13 @@ const Main = ({ location }) => (
           classNames="fade">
 
           <Switch location={location}>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={AboutPage} />
+            <Route exact path="/" component={LoadableHome} />
+            <Route path="/about" component={LoadableAboutPage} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>
 
-      <Modal />
-      <Loader />
+      <LoadableModal />
     </div>
 );
 

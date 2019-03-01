@@ -8,12 +8,14 @@ import {
   getCategory
 } from './reducers/menus';
 import { loading, fetchMenus, setCategory } from './actions/menus';
+import loadable from './utils/loadable';
 
-import SidebarItem from './components/SidebarItem';
-import Error from './components/Error';
-import NavHeader from './components/NavHeader';
-import Main from './components/Main';
 import './App.css';
+
+const LoadableSidebarItem = loadable('components/SidebarItem', 200);
+const LoadableError = loadable('components/Error', 200);
+const LoadableNavHeader = loadable('components/NavHeader', 200);
+const LoadableMain = loadable('components/Main', 200);
 
 class App extends Component {
   state = {
@@ -48,7 +50,7 @@ class App extends Component {
     const sidebarItems = this.props
       .categories
       .map((name, index) => (
-        <SidebarItem
+        <LoadableSidebarItem
           key={index}
           name={name}
           category={this.props.category}
@@ -82,9 +84,9 @@ class App extends Component {
             <FaBars />
           </button>
         </Sidebar>
-        <Error />
-        <NavHeader />
-        <Main />
+        <LoadableError />
+        <LoadableNavHeader />
+        <LoadableMain />
       </div>
     );
   }

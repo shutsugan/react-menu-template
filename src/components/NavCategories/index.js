@@ -7,8 +7,10 @@ import {
 } from '../../reducers/menus';
 import { setCategory} from '../../actions/menus';
 
-import CategoryItem from '../CategoryItem';
+import loadable from '../../utils/loadable';
 import './index.css';
+
+const LoadableCategoryItem = loadable('components/CategoryItem', 200);
 
 class NavCategories extends Component {
   handleClick = ({target}) => {
@@ -17,7 +19,7 @@ class NavCategories extends Component {
 
   render() {
     const categories = this.props.categories.map((name, index) => (
-      <CategoryItem
+      <LoadableCategoryItem
         key={index}
         name={name}
         category={this.props.category}
